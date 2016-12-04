@@ -8,7 +8,7 @@ try {
     .map(filename => yaml.safeLoad(fs.readFileSync(`${path}/${filename}`, 'utf8')) )
     .map(player => ({name: player.lastAccountName, timestamp: player.timestamps.logout}) )
     .sort(player => player.timestamp)
-    .map(player => `${player.name} : ${new Date(player.timestamp)}`)
+    .map(player => `${player.name} (last seen at) ${new Date(player.timestamp)}`)
     .forEach(player => console.log(player) )
 } catch (e) {
   console.log(e)
