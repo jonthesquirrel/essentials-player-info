@@ -8,9 +8,10 @@ try {
   let result = fs.readdirSync(path)
     .map(filename => yaml.safeLoad(fs.readFileSync(`${path}/${filename}`, 'utf8')) )
     .map(player => {
-      return {name: player.lastAccountName, time: player.timestamps.logout}
+      return {name: player.lastAccountName, timestamp: player.timestamps.logout}
     })
-    // .sort()
+    .sort(player => player.timestamp)
+    .map(player => `${player.name} : ${new Date(player.timestamp)}`)
   console.log(result)
 } catch (e) {
   console.log(e)
