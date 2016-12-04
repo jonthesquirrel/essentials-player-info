@@ -10,7 +10,7 @@ try {
     .map(player => ({name: player.lastAccountName, timestamp: player.timestamps.logout}) )
     .sort(player => player.timestamp)
     .map(player => `${player.name} : ${new Date(player.timestamp)}`)
-  console.log(result)
+    .forEach(player => console.log(player) )
 } catch (e) {
   console.log(e)
 }
