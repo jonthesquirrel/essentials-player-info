@@ -1,0 +1,19 @@
+{
+  "name": "essentials-list-all-players",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lasercar/essentials-list-all-players.git"
+  },
+  "author": "Jonathan Herman (lasercar.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lasercar/essentials-list-all-players/issues"
+  },
+  "homepage": "https://github.com/lasercar/essentials-list-all-players#readme"
+}
